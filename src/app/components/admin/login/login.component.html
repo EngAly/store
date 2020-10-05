@@ -1,0 +1,51 @@
+<div style="background-image: url(assets/imgs/online-shopping.jpg);background-repeat: no-repeat;">
+    <div class="container horizontal-middle">
+        <div class="col-12 col-md-8 col-sm-10 col-lg-6">
+            <form class="modal-content animate" [formGroup]="loginForm" (submit)="login()">
+                <div class="imgcontainer">
+                    <img src="assets/imgs/onlinestore.png" alt="Avatar" class="logo">
+                </div>
+
+                <div class="container">
+
+                    <!-- username / email -->
+                    <div class="input-wrapper">
+                        <input id="username" formControlName="email" [(ngModel)]="auth.email" type="text"
+                            placeholder="Username Or Email">
+                        <label for="username" class="fa fa-user input-icon"></label>
+                    </div>
+
+                    <!-- password -->
+                    <div class="input-wrapper">
+                        <input id="password" formControlName="password" [(ngModel)]="auth.password" type="password"
+                            placeholder="Password">
+                        <label for="password" class="fa fa-lock input-icon"></label>
+                    </div>
+
+                    <!-- [disabled]="loginForm.invalid" -->
+                    <!-- login -->
+                    <div class="input-wrapper">
+                        <button [disabled]="loginForm.invalid" class="btn btn-success center">Login &nbsp;
+                            <i *ngIf="!inLogin" class="fa fa-hand-o-right"></i>
+                            <i *ngIf="inLogin" class="fa fa-spinner fa-pulse"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+
+                    <!-- remember me -->
+                    <div style="float:left;">
+                        <input type="checkbox" checked="checked"> Remember me
+                    </div>
+
+                    <!-- password reset-->
+                    <span style="float: right;">Forgot <a href="">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <span class="horizontal-middle">Copyright © 2020. Powered by&nbsp;<a href="#">hitop</a>&nbsp;Inc.</span>
+</div>

@@ -1,0 +1,28 @@
+/* Start Section Contact Us */
+
+.contact-us
+{
+    background:url('/assets/images/contact-us.jpg') no-repeat center center fixed;
+    min-height:300px;
+    font-family: 'Droid Sans', sans-serif
+}
+
+.contact-us .fields {
+    background:rgba(9,9,9,0.8);
+    min-height:300px;color:#DDD ;
+}
+.contact-us i{
+    margin-top: 30px;
+}
+.contact-us p {margin-bottom:40px}
+
+.contact-us textarea {height:108px}
+
+.contact-us input[type="text"],
+
+.contact-us textarea {background:rgba(82,78,78,0.5);color:#FFF;border:none}
+.contact-us button{
+    margin-bottom: 30px;
+}
+
+/* End Section Contact Us */

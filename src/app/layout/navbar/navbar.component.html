@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-light ">
+  <a class="navbar-brand" href="#"><img src="assets/imgs/shopping.png" />Hitop <span>shopping</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+
+      <!-- home -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">home
+          <span class="sr-only">(current)</span></a>
+      </li>
+
+      <!-- pricing -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="/pricing" routerLinkActive="active" id="navbarDropdown"
+          role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Pricing
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item">Action</a>
+          <a class="dropdown-item">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item">Something else here</a>
+        </div>
+      </li>
+
+      <!-- contact -->
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/contact-us" routerLinkActive="active" tabindex="-1"
+          aria-disabled="true">contact</a>
+      </li>
+
+      <!--  -->
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/blogs" routerLinkActive="active" tabindex="-1"
+          aria-disabled="true">blogs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/account/login" routerLinkActive="active" tabindex="-1" aria-disabled="true">Login</a>
+      </li>
+      <li class="nav-item border">
+        <!-- <a class="nav-link "  tabindex="-1" aria-disabled="true">{{"navbar.lang"|translate}}</a> -->
+        <a class="nav-link " tabindex="-1" aria-disabled="true">عربى</a>
+
+      </li>
+    </ul>
+
+    <a class="btn btn-primary my-2 my-sm-0 center" routerLink="/account/register"
+      routerLinkActive="active">Create Your Own Store Now</a>
+  </div>
+</nav>

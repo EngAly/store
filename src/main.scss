@@ -1,0 +1,18 @@
+// buttons
+// to cancle border for buttons make more pretty witout border
+.no-border{
+    border-radius: 0;
+}
+
+//  placeholder section
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+// aligns left and right
+.horizontal-middle {
+   @extend %center;
+ }

@@ -1,0 +1,73 @@
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 6px 6%;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  padding: 8px 10px;
+  cursor: pointer;
+  width: 60%;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.logo {
+  width: 10%;
+ }
+
+.container {
+  padding: 16px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto 1% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+ }
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+.center {
+    margin: 0 20% 0 20%;
+   }
+
+  //  style to setting font awesome inside input box
+   .input-wrapper{
+    position: relative;
+  }
+    .input-icon{
+      position: absolute;
+      left: 2%;
+      top: calc(50% - 0.5em); /* Keep icon in center of input, regardless of the input height */
+      color: rgb(124, 120, 120);
+    }
+
+    /*
+for future
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity 
+    */

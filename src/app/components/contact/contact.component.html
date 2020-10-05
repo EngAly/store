@@ -1,0 +1,46 @@
+<section class="contact-us text-center">
+    <div class="fields">
+        <div class="container">
+          <i class="fa fa-headphones fa-5x"></i>
+          <h1>feeling</h1>
+          <p >feeling-free</p>
+  
+  <!--Start Contact Form-->
+          <form [formGroup]="formData" (ngSubmit)="contactUs()">
+            <div class="row">
+                              
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="userName" [(ngModel)]="contact.userName" placeholder="username">
+                        </div>
+                        <div *ngIf="controls.userName.touched &&controls.userName.errors?.required"   class="alert alert-danger">enter your name</div>
+                        <div class="form-group">
+                            <input type="text" class="form-control"  formControlName="email" [(ngModel)]="contact.email" placeholder="email">
+                        </div>
+                        <div *ngIf="controls.email.touched &&controls.email.errors?.required"   class="alert alert-danger">email</div>
+                        <div *ngIf="controls.email.touched &&controls.email.errors?.email"   class="alert alert-danger">enter valid email</div>
+  
+                        <div class="form-group">
+                            <input type="text" class="form-control"  formControlName="phone" [(ngModel)]="contact.phone" placeholder="phone">
+                        </div>
+                        <div *ngIf="controls.phone.touched &&controls.phone.errors?.required"   class="alert alert-danger">enter your phone</div>
+  
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea class="form-control" formControlName="message" [(ngModel)]="contact.message" placeholder="message"></textarea>
+                        </div>
+                        <div *ngIf="controls.message.touched &&controls.message.errors?.required"   class="alert alert-danger">enter your message</div>
+  
+                        <button type="submit" class="btn btn-danger btn-lg btn-block">contact</button>
+                    </div>              
+                <!-- End Contact Form -->
+            
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+  
+  <!-- End Section Contact Us -->

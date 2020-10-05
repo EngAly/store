@@ -1,0 +1,51 @@
+.navbar{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f3f3f3;
+    
+}
+.navbar .navbar-brand{
+ margin-left: 40px;
+ font-size: 35px;
+ color: #fc0303;
+}
+.navbar .navbar-brand img{
+    width: 60px;
+}
+.navbar .navbar-brand  span{
+  color: #000;
+} 
+.navbar .nav-item{
+    margin-right: 20px;
+    margin-bottom: 4px;
+    transition:  linear 0.4s;
+    
+}
+.navbar .nav-item:hover{
+    background-color:#4e8df2 ;
+}
+
+.border{
+    border: 1px  solid #4e8df2 !important;
+    cursor: pointer;
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color: #4e8df2 ;
+}
+
+@media  screen and (max-width: 991px) {
+    .navbar .nav-item{
+        text-align: center;
+    }
+    .navbar .border{
+        border: none !important;
+    }
+ 
+   .navbar .center{
+    display: block;
+       margin: auto;
+   }
+  }
+
+.contact-form{
+    margin-top: 70px;
+}

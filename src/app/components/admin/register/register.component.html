@@ -1,0 +1,93 @@
+<!-- common social media icons -->
+<social-media></social-media>
+
+<div style="background-image: url(assets/imgs/online-shopping.jpg);background-repeat: no-repeat;">
+    <div class="container horizontal-middle">
+        <div class="col-12 col-md-8 col-sm-10 col-lg-6">
+            <form class="modal-content animate" [formGroup]="registerForm" (submit)="registerNow()">
+                <!-- <div class="imgcontainer">
+                    <img src="assets/imgs/onlinestore.png" alt="Avatar" class="logo">
+                </div> -->
+                <h3 class="text-success" style="margin-top: 5%;">Start your 20-day free trial!</h3>
+                <div class="container">
+
+                    <!-- store name -->
+                    <div class="input-wrapper">
+                        <input id="storename" formControlName="storename" [(ngModel)]="register.storename" type="text"
+                            placeholder=" Store Name">
+                        <label for="storename" class="fa fa-cart-plus input-icon"></label>
+                    </div>
+
+                    <!-- client name -->
+                    <div class="input-wrapper">
+                        <input id="username" formControlName="username" [(ngModel)]="register.username" type="text"
+                            placeholder="Display Name">
+                        <label for="username" class="fa fa-user-o input-icon"></label>
+                    </div>
+
+                    <!-- email -->
+                    <div class="input-wrapper">
+                        <input id="email" class="border" [class.border-danger]="validate('email')"
+                            formControlName="email" [(ngModel)]="register.email" type="text"
+                            placeholder="Email Address">
+                        <label for="email" class="fa fa-user input-icon"></label>
+                    </div>
+                    <!-- email validation
+                    <div *ngIf="formControls.email.touched && formControls.email.invalid" class="alert alert-danger">
+                        <div *ngIf="formControls.phone.errors.email"> please enter valid email
+                        </div>
+                    </div> -->
+
+                    <!-- password -->
+                    <div class="input-wrapper">
+                        <input id="password" class="border" [class.border-danger]="validate('password')"
+                            formControlName="password" [(ngModel)]="register.password" [type]="toggleInputPassword"
+                            placeholder="Password">
+                        <label for="password" class="fa fa-lock input-icon"></label>
+                        <label (click)="togglePassword()" class="fa eye-icon" [ngClass]="{'fa-eye-slash':toggleInputPassword=='text','fa-eye':toggleInputPassword=='password'}"></label>
+                    </div>
+
+                    <!-- phone number -->
+                    <div class="input-wrapper">
+                        <input class="input-phone border" [class.border-danger]="validate('phone')" id="phone"
+                            list="browsers" formControlName="phone" [(ngModel)]="register.phone"
+                            (input)="getCurrentCode()" type="text">
+                        <label for="phone" class="fa input-icon"
+                            [class.fa-phone]="countryCode=='+1111'">{{countryCode}}</label>
+                        <datalist id="browsers">
+                            <option *ngFor="let item of countryCodes" value="{{item['name']}} ({{item['dial_code']}})">
+                            </option>
+                        </datalist>
+                    </div>
+                    <!-- [disabled]="loginForm.invalid" -->
+                    <!-- login -->
+                    <div class="input-wrapper">
+                        <button [disabled]="registerForm.invalid" class="btn btn-success center">Create Your Store
+                            &nbsp;
+                            <i *ngIf="!inRegister" class="fa fa-money"></i>
+                            <i *ngIf="inRegister" class="fa fa-spinner fa-pulse"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br><br><br>
+    <span class="horizontal-middle">Copyright © 2020. Powered by&nbsp;<a href="#">hitop</a>&nbsp;Inc.</span>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- phone validation
+<div *ngIf="formControls.phone.touched && formControls.phone.invalid" style="background: red;">
+    <div [class.d]="" *ngIf="formControls.phone.errors.pattern || formControls.phone.errors.required"> please enter
+        valid phone number
+    </div>
+</div> -->
